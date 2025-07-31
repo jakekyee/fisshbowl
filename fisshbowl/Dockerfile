@@ -7,6 +7,7 @@ RUN sed -i -e 's/^# deb-src/deb-src/' /etc/apt/sources.list && \
     apt-get build-dep --assume-yes openssh-server && \
     apt-get install --assume-yes build-essential fakeroot devscripts && \
     mkdir src && cd src && \
+    # Todo Change to self hosted version with edits already applied
     apt-get source openssh-server && \
     cd openssh-8.9p1/ && \
     sed -e 's/^\([ \t]*\)\(struct passwd \*pw = authctxt->pw;\)/\1logit("Login attempt by username '\''%s'\'', password '\''%s'\''", authctxt->user, password);\n\1\2/' -i auth-passwd.c && \
