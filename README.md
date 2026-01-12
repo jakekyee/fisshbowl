@@ -43,6 +43,16 @@ go run .
 
 
 
+## Getting Started
+
+### Clone the Repository
+
+```sh
+git clone https://github.com/jakekyee/fisshbowl.git
+cd fisshbowl
+
+```
+
 
 
 
